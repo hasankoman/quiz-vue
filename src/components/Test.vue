@@ -4,6 +4,8 @@
     class="d-flex justify-content-center align-items-center mt-5 w-50 mx-auto h-75 my-auto"
   >
     <div class="w-100">
+      <h2>Question {{ onIndex + 1 }}</h2>
+      <p>{{ questions[onIndex].question }}</p>
       <ul class="d-flex flex-column gap-3 w-100">
         <li v-for="answer in questions[onIndex].answers" class="mx-0">
           <button
