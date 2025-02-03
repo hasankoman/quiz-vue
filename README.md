@@ -1,16 +1,16 @@
 # Quiz Vue
 
-> A Vue.js project for creating and managing quizzes.
+> A Vue.js-based quiz application
 
 ## Project Description
 
-Quiz Vue is a simple quiz application built using Vue.js. It allows users to navigate through a series of questions, select answers, and review their choices. The project is designed to be lightweight and easy to set up, making it ideal for educational purposes or quick prototyping.
+**Quiz Vue** is a simple quiz application built using Vue.js. It allows users to answer a series of questions and navigate through them using "Previous" and "Next" buttons. The application is designed to be lightweight, responsive, and easy to use.
 
-### Key Features
-- **Dynamic Question Navigation**: Users can move forward and backward through questions.
-- **Answer Selection**: Users can select answers and review their choices.
-- **Responsive Design**: Built with Bootstrap for a responsive and modern UI.
-- **Vue.js Components**: Modular components for easy maintenance and scalability.
+### Key Features:
+- Dynamic question navigation.
+- Responsive design using Bootstrap.
+- State management for tracking user answers.
+- Easy-to-extend question database.
 
 ---
 
@@ -20,107 +20,115 @@ The project is organized as follows:
 
 ```
 quiz-vue/
-├── .babelrc                # Babel configuration for JavaScript transpilation
+├── .babelrc                # Babel configuration file
 ├── .editorconfig           # Editor configuration for consistent coding styles
-├── .gitignore              # Specifies files and directories to ignore in Git
-├── index.html              # Main HTML file for the application
+├── .gitignore              # Specifies files and folders to be ignored by Git
+├── README.md               # Project documentation
+├── dist/                   # Compiled and bundled files for production
+│   ├── build.js            # Main JavaScript bundle
+│   └── build.js.map        # Source map for debugging
+├── index.html              # Main HTML file
 ├── package.json            # Project dependencies and scripts
-├── README.md               # Project documentation (this file)
-├── App.vue                 # Root Vue component
-├── Header.vue              # Header component
-├── Test.vue                # Test component for displaying questions
-├── questions.json          # JSON file containing quiz questions and answers
-├── main.js                 # Entry point for the Vue application
-├── vue.config.js           # Vue-specific configuration
-├── webpack.config.js       # Webpack configuration for bundling
+├── package-lock.json       # Lock file for dependency versions
+├── src/                    # Source code directory
+│   ├── App.vue             # Main Vue component
+│   ├── assets/             # Static assets (e.g., images)
+│   │   └── logo.png        # Application logo
+│   ├── components/         # Vue components
+│   │   ├── Header.vue      # Header component
+│   │   └── Test.vue        # Quiz component
+│   ├── database/           # Data files
+│   │   └── questions.json  # JSON file containing quiz questions
+│   └── main.js             # Entry point for the Vue application
+├── vue.config.js           # Vue CLI configuration
+└── webpack.config.js       # Webpack configuration for bundling
 ```
 
 ---
 
 ## Tech Stack & Dependencies
 
-### Core Technologies
-- **Vue.js**: A progressive JavaScript framework for building user interfaces.
-- **Bootstrap**: A CSS framework for responsive and modern UI components.
-- **Webpack**: A module bundler for JavaScript and other assets.
-- **Babel**: A JavaScript compiler for using modern JavaScript features.
+### Core Technologies:
+- **Vue.js** (v2.5.11) - Progressive JavaScript framework.
+- **Bootstrap** (v5.2.3) - CSS framework for responsive design.
+- **Webpack** (v3.6.0) - Module bundler.
 
-### Dependencies
-- **vue**: `^2.5.11`
-- **bootstrap**: `^5.2.3`
-- **vue-loader**: `^13.0.5`
-- **vue-template-compiler**: `^2.4.4`
-- **webpack**: `^3.6.0`
-- **webpack-dev-server**: `^2.9.1`
-
-### Development Dependencies
-- **babel-core**: `^6.26.0`
-- **babel-loader**: `^7.1.2`
-- **babel-preset-env**: `^1.6.0`
-- **babel-preset-stage-3**: `^6.24.1`
-- **cross-env**: `^5.0.5`
-- **css-loader**: `^0.28.7`
-- **file-loader**: `^1.1.4`
+### Development Dependencies:
+- **Babel** - Transpiler for modern JavaScript.
+- **Vue Loader** - Webpack loader for Vue components.
+- **Cross-Env** - Environment variable management.
+- **CSS Loader** - Webpack loader for CSS files.
+- **File Loader** - Webpack loader for static assets.
 
 ---
 
 ## Installation & Setup
 
-### Prerequisites
-- Node.js (v14 or higher recommended)
-- npm (Node Package Manager)
+### Prerequisites:
+- Node.js (v14 or higher)
+- npm (v6 or higher)
 
-### Steps
-1. **Clone the repository**:
+### Steps:
+1. Clone the repository:
    ```bash
    git clone https://github.com/hasankoman/quiz-vue.git
    cd quiz-vue
    ```
 
-2. **Install dependencies**:
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-3. **Run the development server**:
+3. Start the development server:
    ```bash
    npm run dev
    ```
    The application will be available at `http://localhost:8080`.
 
-4. **Build for production**:
+4. Build for production:
    ```bash
    npm run build
    ```
-   The production-ready files will be generated in the `dist/` directory.
+   The production-ready files will be generated in the `dist/` folder.
 
 ---
 
 ## Usage Guide
 
-### Running the Application
+### Running the Application:
 - Use `npm run dev` to start the development server with hot reload.
-- Use `npm run build` to generate a production build.
+- Use `npm run build` to generate optimized production files.
 
-### Navigating the Quiz
-- Use the "Devam Et" (Continue) button to move to the next question.
-- Use the "Önceki" (Previous) button to go back to the previous question.
-- Select an answer by clicking on the corresponding button.
+### Navigating the Quiz:
+- Click on an answer to select it.
+- Use the "Previous" and "Next" buttons to navigate between questions.
+- Click "Tamamla" (Finish) on the last question to complete the quiz.
 
 ---
 
 ## Contribution Guidelines
 
-Contributions are welcome! If you'd like to contribute, please follow these steps:
+Contributions are welcome! Please follow these steps:
 
 1. Fork the repository.
-2. Create a new branch for your feature or bugfix.
-3. Commit your changes with clear and descriptive messages.
-4. Submit a pull request.
+2. Create a new branch for your feature or bugfix:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add your message here"
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+5. Open a pull request.
 
-### Coding Style
+### Coding Style:
 - Follow the existing code style (2-space indentation, ES6 syntax).
-- Ensure all new code is properly documented.
+- Ensure all changes are linted and tested.
 
 ---
 
@@ -138,4 +146,4 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ---
 
-For more details on Vue.js, check out the [official Vue.js documentation](https://vuejs.org/v2/guide/).
+For more details on Vue.js, check out the [official documentation](https://vuejs.org/v2/guide/).
